@@ -176,7 +176,8 @@ Interpreter.vm = null;
 /**
  * The global object (`window` in a browser, `global` in node.js) is `this`.
  */
-Interpreter.nativeGlobal = this;
+
+Interpreter.nativeGlobal = self ? self : this;
 
 /**
  * Code for executing regular expressions in a thread.
